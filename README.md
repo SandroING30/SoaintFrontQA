@@ -66,22 +66,23 @@ Una vez clonado el repositorio, abre el proyecto en **Visual Studio Code (VS Cod
 ```
 
 3. **Configuración del navegador**
+En el archivo `hooks.ts` se define el navegador que se va a utilizar, este navegador se va a configurar de acuerdo a sus necesidades:
 
-En el archivo `hooks.ts` se configura el navegador que se utilizará para las pruebas. Puedes ajustarlo según tus preferencias:
-
-    Before(async function() {
+    ```ts
+    Before(async function(){
         browser = await chromium.launch({
             headless: false, 
-            // channel: 'msedge'  <== Descomentar esta línea si quieres usar Edge u otro navegador
+            //channel: 'msedge' <==DESCOMENTAR ESTA LÍNEA DE CÓDIGO SI SE DESEA USAR EDGE O CAMBIAR OTRO CHANEEL
         });
-        context = await browser.newContext();
-        page = await context.newPage();
+        context = await browser.newContext()
+        page = await context.newPage()
         pageFixture.page = await page;
         page.setViewportSize({
-            width: 1500,
+            width: 1500, 
             height: 700,
         });
-    });
+    })
+    ```
     
 Adicionalmente, en `playwright.config.ts` puedes definir los navegadores disponibles para las pruebas.
 
