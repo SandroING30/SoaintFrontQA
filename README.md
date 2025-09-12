@@ -6,6 +6,7 @@ Repositorio del proyecto de **automatización de pruebas QA del Frontend** de Sa
 
 ## 📁 Estructura del Proyecto
 
+```
 SOAINTFrontQA-main/
 ├── node_modules/                           # Carpeta que contiene todas las dependencias instaladas del proyecto
 ├── screenshots/                            # Capturas de pantalla generadas automáticamente tras la ejecución de pruebas
@@ -32,6 +33,7 @@ SOAINTFrontQA-main/
 ├── playwright.config.ts                    # Configuración personalizada de Playwright
 ├── README.md                               # Documentación del proyecto
 └── tsconfig.json                           # Configuración del compilador TypeScript
+```
 
 ## 🔹 Descripción de Carpetas y Archivos
 
@@ -67,7 +69,6 @@ Una vez clonado el repositorio, abre el proyecto en **Visual Studio Code (VS Cod
 
 En el archivo `hooks.ts` se configura el navegador que se utilizará para las pruebas. Puedes ajustarlo según tus preferencias:
 
-    ```ts
     Before(async function() {
         browser = await chromium.launch({
             headless: false, 
@@ -81,7 +82,6 @@ En el archivo `hooks.ts` se configura el navegador que se utilizará para las pr
             height: 700,
         });
     });
-    ```
     
 Adicionalmente, en `playwright.config.ts` puedes definir los navegadores disponibles para las pruebas.
 
