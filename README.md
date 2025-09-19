@@ -54,7 +54,7 @@ Para ejecutar en tu ordenador el siguiente proyecto, sigue los siguientes pasos:
 Clona este repositorio en tu máquina local usando el siguiente comando:
 
 ```bash
-   git clone https://github.com/MonoSama/SoaintFrontQA.git
+   git clone https://github.com/SandroING30/SoaintFrontQA.git
 ```
 
 2. **Instalar Dependencias**
